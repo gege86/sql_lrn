@@ -15,3 +15,12 @@ select max(salary * months), count(employee_id)
   where
     (salary * months) = (select max(salary * months) from employee) 
 ;
+-- other nice soltution from discussion page:
+SELECT *
+FROM (
+    SELECT Months * Salary, COUNT(*)
+    FROM Employee
+    GROUP BY (Months * Salary)
+    ORDER BY Months * Salary DESC
+    )
+fetch first row only ;
