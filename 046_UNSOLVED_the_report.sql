@@ -34,3 +34,4 @@ where
 order by 2 desc, 1 asc, 3 asc
 ;
 -- there must be a better way, need to check other solutions
+-- printed NULL as string, otherwise the solution was not accepted - db2 returns -- instead of writing out NULL in the output
