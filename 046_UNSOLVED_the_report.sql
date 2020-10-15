@@ -35,3 +35,10 @@ order by 2 desc, 1 asc, 3 asc
 ;
 -- there must be a better way, need to check other solutions
 -- printed NULL as string, otherwise the solution was not accepted - db2 returns -- instead of writing out NULL in the output
+SELECT 
+    *
+FROM
+    Students INNER JOIN Grades
+    ON Students.Marks BETWEEN Grades.Min_Mark AND Max_Mark
+;
+-- <--- woah dude! you can put 'between' to the join predicates? awesome.
